@@ -22,7 +22,7 @@ const App = () => {
             useCSSBaseline={true} // If `true`, apply CSS reset and base styles
         >
             <Layout>
-                <Flex display="inline-flex" direction="column" rowGap="4x">
+                <Flex display="inline-flex" direction="column" rowGap="4x" marginTop="16x">
                     <Button onClick={toggleMenu} variant="ghost" width="8x" height="8x" bgColor="gray:90" borderRadius="circle">
                         <Icon icon="user-team" />
                     </Button>
