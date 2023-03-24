@@ -8,7 +8,15 @@ function ResponsiveMenu() {
                 defaultValue: 'dark', // One of: 'dark', 'light'
             }}
         >
-            <Flex display="inline-flex" flexDirection="column" position="fixed" marginTop="8x" bgColor="gray:90">
+            <Flex display="inline-flex"
+                flexDirection="column"
+                position="fixed"
+                marginTop="9x"
+                marginLeft="1x"
+                marginRight="1x"
+                right="inherit"
+                // right="1x"
+                bgColor="gray:90">
                 <MenuItem value="settings">
                     <Icon icon="settings" mr="2x" />
                     <Text>Settings</Text>

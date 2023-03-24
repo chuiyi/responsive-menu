@@ -5,16 +5,9 @@ import { Box, useColorStyle, useColorMode, useTheme } from '@tonic-ui/react';
 function Layout(props) {
     const [colorMode] = useColorMode();
     const [colorStyle] = useColorStyle({ colorMode });
-    const { colors, fontSizes, lineHeights } = useTheme();
+    const { fontSizes, lineHeights } = useTheme();
     const backgroundColor = colorStyle.background.primary;
     const color = colorStyle.color.primary;
-    const scrollbarThumbBackgroundColor = colorStyle.color.disabled;
-    const scrollbarThumbHoverBackgroundColor = colorStyle.color.tertiary;
-    const scrollbarThumbHoverBorderColor = colorStyle.color.secondary;
-    const scrollbarTrackBackgroundColor = {
-        light: 'gray:30',
-        dark: 'gray:70',
-    }[colorMode];
 
     return (
         <>
@@ -30,21 +23,6 @@ function Layout(props) {
                         font-size: ${fontSizes.sm};
                         line-height: ${lineHeights.sm};
                         text-align: center;
-                    }
-
-                    ::-webkit-scrollbar {
-                        width: 8px;
-                        height: 8px;
-                    }
-                    ::-webkit-scrollbar-track {
-                        background-color: ${colors[scrollbarTrackBackgroundColor]};
-                    }
-                    ::-webkit-scrollbar-thumb {
-                        background-color: ${colors[scrollbarThumbBackgroundColor]};
-                    }
-                    ::-webkit-scrollbar-thumb:hover {
-                        background-color: ${colors[scrollbarThumbHoverBackgroundColor]};
-                        border: 1px solid ${colors[scrollbarThumbHoverBorderColor]};
                     }
                 `}
             />
